@@ -49,7 +49,7 @@ def gameloop():
 
 	foodx = round(random.randrange(0,width - snake_block)/float(snake_block))*float(snake_block)
 	foody = round(random.randrange(0,height - snake_block)/float(snake_block))*float(snake_block)
-	print(foodx,foody)
+	#print(foodx,foody)
 	
 	movr, movl, movd, movu = False, False, False, False
 
@@ -72,7 +72,7 @@ def gameloop():
 					
 
 		for event in pygame.event.get():
-			print("entered keydown: "+str(keydown_flag))
+			#print("entered keydown: "+str(keydown_flag))
 			if event.type == pygame.QUIT:
 				game_over=True
 			if event.type == pygame.KEYDOWN and keydown_flag == True:
@@ -109,7 +109,7 @@ def gameloop():
 			if keydown_flag == False and pygame.time.get_ticks()-starttime >=10:
 				keydown_flag = True
 		if x1<0 or y1<0 or x1>=width or y1>=height:
-			print("out of boundries")
+			#print("out of boundries")
 			game_close=True
 							
 		x1 += x1_change
@@ -136,7 +136,7 @@ def gameloop():
 			foodx = round(random.randrange(0,width - snake_block)/float(snake_block))*float(snake_block)
 			foody = round(random.randrange(0,height - snake_block)/float(snake_block))*float(snake_block)
 			length_of_snake +=1
-			print("Yummy!!")
+			#print("Yummy!!")
 		clock.tick(snake_speed)
 
 	pygame.quit()
