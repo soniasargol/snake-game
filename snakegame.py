@@ -1,3 +1,5 @@
+# Obtained from https://www.edureka.co/blog/snake-game-with-pygame/
+
 import pygame, sys,time,random
 pygame.init()
 size = width, height =600,400
